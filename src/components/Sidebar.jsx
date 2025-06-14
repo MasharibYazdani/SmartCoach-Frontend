@@ -7,6 +7,7 @@ const SideBar = () => {
       <div>
         <div className="p-6 text-2xl font-bold text-primary">MyApp</div>
         <nav className="px-4 flex flex-col gap-2">
+          <SidebarItem icon={<Home size={20} />} label="Dashboard" />
           <SidebarItem icon={<Users size={20} />} label="Students" />
           <SidebarItem icon={<Book size={20} />} label="Courses" />
           <SidebarItem icon={<UserPlus size={20} />} label="Enrollments" />
