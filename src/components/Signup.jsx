@@ -6,7 +6,7 @@ import { useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../utils/constant";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -114,6 +114,13 @@ const Signup = () => {
             <Button type="submit" className="w-full cursor-pointer">
               Signup
             </Button>
+
+            <div className="text-center">
+              <span>Existing User ? </span>
+              <Link className="text-blue-500" to={"/login"}>
+                Log In
+              </Link>
+            </div>
           </form>
         </CardContent>
       </Card>

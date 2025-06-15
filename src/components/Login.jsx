@@ -6,7 +6,7 @@ import { useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../utils/constant";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 
@@ -84,6 +84,13 @@ const Login = () => {
             <Button type="submit" className="w-full cursor-pointer">
               Login
             </Button>
+
+            <div className="text-center">
+              <span>New User ? </span>
+              <Link className="text-blue-500" to={"/signup"}>
+                Sign Up
+              </Link>
+            </div>
           </form>
         </CardContent>
       </Card>
